@@ -6,10 +6,10 @@ var w = c.width = window.innerWidth,
 		hh = h / 2,
 		
 		opts = {
-			strings: [ 'HAPPY BIRTHDAY!', 'CHÚC ĐẠT TUỔI MỚI RỰC RỠ', '83 86' ],
-			charSize: 30,
-			charSpacing: 35,
-			lineHeight: 40,
+			strings: [ 'HAPPY BIRTHDAY!', 'CHÚC ĐẠT', 'TUỔI MỚI RỰC RỠ', '83 86' ],
+			charSize: 26,
+			charSpacing: 30,
+			lineHeight: 36,
 			
 			cx: w / 2,
 			cy: h / 2,
