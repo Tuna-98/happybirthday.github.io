@@ -13,8 +13,8 @@
   <body>
     <!-- Audio -->
     <div class="audio">
-      <audio id="autoplay" controls loop>
-        <source src="./file/Happy Birthday To You - Acoustic.mp4" type="audio/mpeg" />
+      <audio id="autoplay" controls loop preload="auto" autoplay>
+        <source src="./file/Happy Birthday To You - Acoustic.mp4" type="audio/mp4" />
       </audio>
     </div>
     <!-- Happy Birthday -->
@@ -48,7 +48,14 @@
 
     <script src="./script.js"></script>
     <script>
-      document.getElementById("autoplay").play();
+      window.addEventListener('load', function() {
+        var audio = document.getElementById('autoplay');
+        var shouldPlay = sessionStorage.getItem('playAudio');
+        if (shouldPlay) {
+          audio.play().catch(function() {});
+          sessionStorage.removeItem('playAudio');
+        }
+      });
 
       // heart
       setTimeout(() => {

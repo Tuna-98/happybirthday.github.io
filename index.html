@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/png" href="./file/birthday.png"/>
-  <title>Happy Birthday Đồng</title>
+  <title>Happy Birthday Đạt</title>
 </head>
 <body>
   <div class="container">
@@ -17,6 +17,16 @@
       <span></span>
     </a>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var btn = document.querySelector('.animated-button1');
+      if (btn) {
+        btn.addEventListener('click', function() {
+          sessionStorage.setItem('playAudio', 'true');
+        });
+      }
+    });
+  </script>
 </body>
 <style>
   .container{
